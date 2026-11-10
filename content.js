@@ -15,7 +15,7 @@ window.PORTFOLIO = {
   /* ---------- Look and feel ----------
      palette: the colour theme a visitor sees first:
      "marigold", "peacock", "rani" or "forest". Visitors can switch it. */
-  theme: { palette: "marigold" },
+  theme: { palette: "peacock" },
 
   /* ---------- Basic profile ---------- */
   profile: {

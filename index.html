@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-palette="marigold">
+<html lang="en" data-palette="peacock" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -590,7 +590,7 @@ button.state:focus-visible{outline:3px solid var(--rt); outline-offset:2px}
   var root = document.documentElement;
   function setPalette(p){ root.setAttribute("data-palette", p); document.querySelectorAll(".sw").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-p")===p ? "true" : "false"); }); }
   var startPalette = (D.theme && D.theme.palette) || "marigold";
-  try { startPalette = localStorage.getItem("as-palette") || startPalette; var t = localStorage.getItem("as-theme"); if(t) root.setAttribute("data-theme", t); } catch(e){}
+  try { startPalette = localStorage.getItem("as-palette") || startPalette; var t = localStorage.getItem("as-theme"); root.setAttribute("data-theme", t || "light"); } catch(e){}
   setPalette(startPalette);
   $("swatches").addEventListener("click", function(e){ var b = e.target.closest(".sw"); if(!b) return; setPalette(b.getAttribute("data-p")); try { localStorage.setItem("as-palette", b.getAttribute("data-p")); } catch(err){} });
   $("themeBtn").addEventListener("click", function(){
